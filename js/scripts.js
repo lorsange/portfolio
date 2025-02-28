@@ -13,7 +13,7 @@
 					slideExpr: '.gallery-item',
 					fx:        'fade', 
 		   			speed:     1000, 
-					timeout:   5000,
+					timeout:   5000,	
 					pager:   	 '#gallerythumbs', 
 					slideResize: true,
 					containerResize: true,
@@ -96,8 +96,8 @@
 			images: gallery_set,
 			frames_per_second: 30,
 			display_time: 5000,
-			fade_time: 1000,
-			zoom: 1.2,
+			fade_time: 1000,	
+			zoom: 1.075,
 			background_color:'#F7F6F5'
 		});
 	}
@@ -161,7 +161,7 @@
 			$before_after.imageReveal({
 				barWidth: 4,
 				touchBarWidth: 50,
-				startPosition: 0.5,
+				startPosition: 0.1,
 				width: jQuery('.before-after img').width(),
 				height:  jQuery('.before-after img').height()
 			});

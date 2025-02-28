@@ -1,0 +1,50 @@
+I"�<h2 id="turn-all-out_-prefixed-nodes-into-payload-usd-components">Turn all “OUT_” prefixed nodes into payload USD components</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>target_stage = hou.node('/stage/geo_to_usd')
+base_network = hou.node('/stage/objnet1/import')
+
+def tree(target_stage, soppath, name):
+    #sopimport
+    sopimport = target_stage.createNode("sopimport", name)
+    sopimport.parm("soppath").set(soppath)
+    sopimport.parm("asreference").set(1)
+    sopimport.parm("primpath").set(f"/{name}")
+    sopimport.parm("savepath").set(f"$HIP/../../usd/assets/{name}/geo.usdc")
+    sopimport.parm("enable_savepath").set(1)
+    sopimport.parm("authortimesamples").set("never")
+    
+    #loft
+    loft = target_stage.createNode("loftpayloadinfo")
+    
+    #usdrop
+    usdrop = target_stage.createNode("usd_rop")
+    usdrop.parm("lopoutput").set(f"$HIP/../../usd/assets/{name}/{name}.usdc")
+    
+    loft.setInput(0, sopimport)
+    usdrop.setInput(0, loft)
+    target_stage.layoutChildren()
+    
+out_nodes = base_network.glob("OUT_*")
+for node in out_nodes:
+    name = node.name()
+    tree(target_stage, node.path(), name[4:])
+</code></pre></div></div>
+
+<h2 id="import-usd-files-into-lops">Import USD files into LOPS</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+
+def reference(target_stage, filepath, name):
+    reference = target_stage.createNode("reference::2.0", name)
+    reference.parm("filepath1").set(filepath)
+    reference.parm("primpath1").set(name)
+
+rootdir = r"E:\Architecture\1_School_Work\College\UVL\production\usd\assets"
+target_stage = hou.node('/stage/setup')
+for subdir, dirs, files in os.walk(rootdir):
+    for file in files:
+        if file != "geo.usdc":
+            reference(target_stage, os.path.join(subdir, file), file[:-5])
+</code></pre></div></div>
+
+:ET

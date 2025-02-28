@@ -31,7 +31,7 @@ body.fullscreen .position-absolute { color: #dddddd;  bottom: 0; left: 0; width:
 
 
 h1 { font-weight: normal; font-size: 1.7em; margin: 0 0 .5em 0; line-height: 1.4; }
-h2 { font-weight: normal; font-size: 1.5em; margin: 0 0 .7em 0; line-height: 1.2; letter-spacing: .01em;  }
+h2 { font-weight: normal; font-size: 1.25em; margin: 0 0 .7em 0; line-height: 1.2; letter-spacing: .01em;  }
 h3 { font-weight: normal; font-size: 1.25em; margin: 0 0 .5em 0; line-height: 1.4; }
 h4 { font-weight: normal; font-size: 1.15em; margin: 0 0 .5em 0; line-height: 1.4; }
 h5 { font-weight: bold; font-size: 1em; margin: 0 0 .5em 0; line-height: 1.4; }
@@ -60,7 +60,7 @@ ul.aligncenter, .aligncenter ul, ol.aligncenter, .aligncenter ol { list-style-po
 .justifyright { text-align: right; }
 .hidden { display: none; }
 .big, big { font-size: 1.15em; line-height: 1.5; font-weight: 300; }
-h2.big { font-size: 240%; letter-spacing: .1em; }
+h2.big { font-size: 200%; letter-spacing: .1em; }
 .extrabig { font-size: 1.9em; line-height: 1.3; }
 .small, small { font-size: .85em; line-height: 1.5; }
 .extrasmall { font-size: .6em; }
@@ -140,7 +140,7 @@ ul.soc-icons { list-style: none; display: inline-block; vertical-align: top; pad
 ul.soc-icons::after { content: ""; display: block; clear: both; }
 ul.soc-icons li { display: inline-block; padding: 0 0 0 1em; font-size: 1.5em; }
 ul.soc-icons li a { text-decoration: none !important;}
-ul.soc-icons li a:hover i { color: #000;
+ul.soc-icons li a:hover i { color: #000
 	-moz-animation: spinHorizontal .5s linear;
     -o-animation: spinHorizontal .5s linear;    
     -webkit-animation: spinHorizontal .5s linear;

@@ -6,7 +6,7 @@
 
                 <ul class="list-inline text-center">
 
-                    {% if site.facebook_username %}
+                    <!-- {% if site.facebook_username %}
                     <li>
                         <a href="https://facebook.com/{{ site.facebook_username }}" data-toggle="tooltip" title="Facebook">
                             <span class="fa-stack fa-lg">
@@ -15,10 +15,20 @@
                             </span>
                         </a>
                     </li>
-                    {% endif %}
-                    {% if site.twitter_username %}
+                    {% endif %} -->
+                    {% if site.linkedin_username %}
                     <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" title="Twitter">
+                        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" data-toggle="tooltip" title="Linkedin">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    <!-- {% if site.twitter_username %}
+                    <li>
+                        <a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" title="Twiiter">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -55,7 +65,7 @@
                             </span>
                         </a>
                     </li>
-                    {% endif %}
+                    {% endif %} -->
                     {% if site.github_username %}
                     <li>
                         <a href="https://github.com/{{ site.github_username }}" data-toggle="tooltip" title="Github">
@@ -74,18 +84,18 @@
 </span>
           </a> </li>
 
-         <li>
+        <!-- <li>
                         <a href="{{ "/feed.xml" | prepend: site.baseurl }}" data-toggle="tooltip" title="Feed">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
-                    </li>
+                    </li> 
                 </ul>
                 <p class="copyright text-muted">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
-<center><h6><p>Powered by <a href="https://github.com/jekyll/">Jekyll</a>.</p></h6></center>
-            </div>
+<center><h6><p>Powered by <a href="https://github.com/jekyll/">Jekyll</a>.</p></h6></center> -->
+            </div> 
         </div>
     </div>
 </footer>

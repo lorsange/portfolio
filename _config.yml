@@ -1,15 +1,16 @@
 # Site settings
-title: PHOTORAMA
-email: ""
-description: "Photo Journal"
-url: "https://sunbliss.github.io"
-baseurl: "/photorama"
+title: Joshua Weber
+email: "latimeriasfolio@gmail.com"
+description: "Photo notes"
+url: "https://latimerias.github.io"
+baseurl: "/portfolio"
 facebook_username: ""
 twitter_username: ""
-instagram_username: ""
-github_username:  ""
+instagram_username: "coeleca"
+github_username:  "latimerias"
 deviantart_username: ""
 flickr_username: ""
+linkedin_username: "joshua-weber-357354203"
 discus_shortname: ""
 share: true
 
@@ -33,9 +34,10 @@ comments :
 
 # Internal nav
 nav:
-  - GALLERY: "https://sunbliss.github.io/photorama/gallery/"  
-  - JOURNAL: "https://sunbliss.github.io/photorama/journal/"
-  - ABOUT: "https://sunbliss.github.io/photorama/about/"
+  - GALLERY: "https://latimerias.github.io/portfolio/gallery/"  
+  - JOURNAL: "https://latimerias.github.io/portfolio/journal/"  
+  - NOTES: "https://latimerias.github.io/portfolio/notes/"
+  - ABOUT: "https://latimerias.github.io/portfolio/about/"
 
 # All translation keys
 translations:
@@ -52,10 +54,10 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 paginate: 5
-paginate_path: "/journal/page:num/"
-permalink: "/journal/:title/"
-categories_path: "/journal/category/"
-tags_path: "/journal/tag/"
+paginate_path: "/notes/page:num/"
+#permalink: "/notes/:title/"
+categories_path: "/notes/category/"
+tags_path: "/notes/tag/"
 gems: 
  - jekyll-paginate
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]

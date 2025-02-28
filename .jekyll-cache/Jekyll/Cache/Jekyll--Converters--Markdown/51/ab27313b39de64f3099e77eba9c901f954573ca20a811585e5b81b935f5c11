@@ -1,0 +1,287 @@
+I"((<h2 id="firms">Firms</h2>
+
+<ul>
+  <li>
+    <p><a href="https://www.fastepp.com/" target="_blank">Fast + EPP Engineering and Architecture</a></p>
+  </li>
+  <li>
+    <p><a href="https://structurecraft.com/r" target="_blank">StructureCraft Timber Construction</a></p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="calculators-and-tectonic-resources">Calculators and Tectonic Resources</h2>
+
+<ul>
+  <li><a href="https://www.fastepp.com/concept-lab/calculator" target="_blank">Fast + EPP Concrete, Wood and Steel Structure Calculator</a></li>
+</ul>
+
+<hr />
+
+<h2 id="rd">R&amp;D</h2>
+<ul>
+  <li>
+    <p><a href="https://www.tokeru.com/cgwiki/index.php?title=Main_Page#" target="_blank">CG Wiki</a></p>
+  </li>
+  <li>
+    <p><a href="http://design-automation.net/" target="_blank">Design Automation Lab at NUS</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/design-automation" target="_blank">Design Automation Lab at NUS - GitHub</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/elerac/btf-rendering/blob/master/README.md" target="_blank">BTF Rendering in Mitsuba 2</a></p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="cs-assets">CS Assets</h2>
+
+<ul>
+  <li>
+    <p><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">WHL Library for Python Modules</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.dostips.com/DtTipsStringManipulation.php#Snippets.Replace">DOStips Batch Command (String Manipulation)</a></p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="technical-assets">Technical Assets</h2>
+
+<ul>
+  <li><a href="https://github.com/design-automation/houdarcs" target="_blank">Houdini Architecture Assets</a></li>
+</ul>
+
+<hr />
+<h2 id="reference-materials">REFERENCE MATERIALS</h2>
+
+<ul>
+  <li><a href="https://teulo.co/events/" target="_blank">Tuelo Talks Free Accredited Webinars and Events</a></li>
+</ul>
+
+<h6 id="sustainable-design">Sustainable Design</h6>
+
+<ul>
+  <li>
+    <p><a href="https://www.eugene-or.gov/DocumentCenter/View/9780/Rainwater-Harvesting-Workshop-presentation?bidId=" target="_blank">Rain Water Harvesting Guide</a></p>
+  </li>
+  <li>
+    <p><a href="https://extension.oregonstate.edu/mg/metro" target="_blank">Master Gardener OSU</a></p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="data-sources">DATA SOURCES</h2>
+
+<h6 id="mapping-data">Mapping Data</h6>
+<ul>
+  <li>
+    <p><a href="https://www.mapbox.com/" target="_blank">Mapbox Mapping Data for Buildings, Traffic, Weather, Demographics etc..</a></p>
+  </li>
+  <li>
+    <p><a href="https://cadmapper.com/pro/home" target="_blank">CADmapper Mapping Data for Buildings and Roads</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.chengfolio.com/google_map_customizer" target="_blank">Google Maps Customizer in Browser</a></p>
+  </li>
+  <li>
+    <p><a href="https://snazzymaps.com/" target="_blank">SnazzyMaps Maps Customizer in Browser</a></p>
+  </li>
+  <li>
+    <p><a href="http://andrewmarsh.
+com/software/" target="_blank">Andrew Marsh Web Tools: 3D/2D Sun path, Psychrometric Chart, CIE Sky Generator etc..</a></p>
+  </li>
+  <li>
+    <p><a href="https://portal.opentopography.org/datasets" target="_blank">LiDAR Data (Mainly in the U.S.)</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.wrld3d.com/3d-maps/mapping-data#OUR-MAP-DATA-SOURCES" target="_blank">WRLD3D High Quality Mapping Data (paid)</a></p>
+  </li>
+  <li>
+    <p><a href="https://tangrams.github.io/heightmapper/#4.70833/14.514/-3.134" target="_blank">Heightmaps (Global Coverage)</a></p>
+  </li>
+</ul>
+
+<h6 id="analysis-data">Analysis Data</h6>
+
+<ul>
+  <li>
+    <p><a href="https://mesonet.agron.iastate.edu/sites/locate.php" target="_blank">Windroses</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.weather.gov/wrh/climate?wfo=pqr" target="_blank">U.S. Weather/Climate Data and Records</a></p>
+  </li>
+  <li>
+    <p><a href="https://imapinvasives.natureserve.org/imap/services/page/map.html" target="_blank">IMapInvasives Invasive Species Data</a></p>
+  </li>
+  <li>
+    <p><a href="https://gis-pdx.opendata.arcgis.com/" target="_blank">City of Portland Open Data</a></p>
+  </li>
+  <li>
+    <p><a href="https://data.census.gov/" target="_blank">U.S. Census Data</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.hiddenhydrology.org/projects/portland/ecological-inspirations/" target="_blank">Hidden Hydrology: Hisorical Ecology in Portland</a></p>
+  </li>
+  <li>
+    <h2 id="portland-metro-data"><a href="https://rlisdiscovery.oregonmetro.gov/search?q=UGB" target="_blank">Portland METRO Data</a></h2>
+  </li>
+</ul>
+
+<h2 id="2d-assets">2D ASSETS</h2>
+
+<h6 id="btf-material-databases">BTF Material Databases</h6>
+
+<ul>
+  <li>
+    <p><a href="https://www.cs.columbia.edu/CAVE/software/curet/" target="_blank">CUReT BTF Database</a></p>
+  </li>
+  <li>
+    <p><a href="https://cg.cs.uni-bonn.de/en/projects/btfdbb/download/" target="_blank">Bonn BTF Database</a></p>
+  </li>
+</ul>
+
+<h6 id="pbr-materials">PBR Materials</h6>
+
+<ul>
+  <li>
+    <p><a href="https://matlib.gpuopen.com/main/materials/all" target="_blank">AMD GPUOpen MaterialX Library</a></p>
+  </li>
+  <li>
+    <p><a href="https://ambientcg.com/list?category=&amp;date=&amp;createdUsing=&amp;basedOn=&amp;q=road&amp;method=&amp;type=&amp;sort=Popular" target="_blank">AmbientCG</a></p>
+  </li>
+  <li><a href="https://www.sketchuptextureclub.com/textures/architecture/buildings/skycrapers" target="_blank">SketchupTextureClub: PBR Materials, Building Textures, Orthographic Photos etc…</a></li>
+  <li>
+    <p><a href="https://www.cgbookcase.com/textures" target="_blank">CGbookcase PBR Materials</a></p>
+  </li>
+  <li>
+    <p><a href="https://polyhaven.com/" target="_blank">Polyhaven HDRI’s and PBR Materials (Previously HDRI Haven)</a></p>
+  </li>
+  <li>
+    <p><a href="https://3dtextures.me/" target="_blank">3Dtextures PBR Materials</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.sharetextures.com/" target="_blank">ShareTextures PBR Materials (Previously CC0 Textures)</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.poliigon.com/" target="_blank">Poliigon PBR Materials (only some free stuff)</a></p>
+  </li>
+  <li><a href="https://www.textures.com/" target="_blank">Textures.com Textures, Orthographic Images, PBR Materials etc… (Low res unless you pay)</a></li>
+  <li>
+    <p><a href="https://freepbr.com/" target="_blank">FreePBR PBR Materials</a></p>
+  </li>
+  <li><a href="https://flyingarchitecture.com/store" target="_blank">FlyingArchitecture PBR Materials (free and paid)</a></li>
+</ul>
+
+<h6 id="textures">Textures</h6>
+
+<ul>
+  <li>
+    <p><a href="https://www.architextures.org/textures/379" target="_blank">Architextures Textures and CAD Hatches</a></p>
+  </li>
+  <li><a href="https://sites.google.com/site/freeseamlesstextures/home/grass-plants" target="_blank">High Res Library of Seamless and Non-Seamless Textures</a></li>
+  <li>
+    <p><a href="https://wojciechpiwowarczyk.gumroad.com/?sort=page_layout" target="_blank">Photoreal Leaf Textures</a></p>
+  </li>
+  <li>
+    <p><a href="http://texturify.com/" target="_blank">Textureify Textures, Background and HDRI’s</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.cadnav.com/" target="_blank">CadnNav Textures</a></p>
+  </li>
+  <li><a href="https://3dsky.org/3dmodels?cat=teksturi&amp;types=free&amp;page=1]" target="_blank">3Dsky Textures and HDRI’s</a></li>
+</ul>
+
+<h6 id="hdris">HDRI’s</h6>
+
+<ul>
+  <li>
+    <p><a href="https://locationtextures.com/panoramas/360-hdri-panoramas/" target="_blank">LocationTextures Sky HDRI’s</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.360cities.net/" target="_blank">360Cities HDRI’s and Panoramas from Around the World (real world location)</a></p>
+  </li>
+  <li>
+    <p><a href="https://hdri-skies.com/" target="_blank">HDRI Skies</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.ihdri.com/" target="_blank">IHDRI</a></p>
+  </li>
+</ul>
+
+<h6 id="cutouts">Cutouts</h6>
+
+<ul>
+  <li><a href="https://meye.dk/" target="_blank">Meye Free Plant Cutouts</a></li>
+</ul>
+
+<h6 id="photos">Photos</h6>
+
+<ul>
+  <li><a href="https://www.photobash.co/" target="_blank">Photo Bash</a></li>
+</ul>
+
+<hr />
+
+<h2 id="3d-assets">3D ASSETS</h2>
+
+<ul>
+  <li>
+    <p><a href="https://community.lumion.com/index.php?resources/the-official-lumion-list-of-3d-model-collections.3/" target="_blank">Large List of 3D and 2D Asset Sources by Lumion</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.designconnected.com/Freebies/" target="_blank">Interior Furniture and Decor</a></p>
+  </li>
+  <li><a href="https://www.bimobject.com/en/product?freetext=reception%20desk" target="_blank">BIMobject 3D Library for Almost Anything</a></li>
+  <li>
+    <p><a href="https://www.vizpark.com/free-stuff/" target="_blank">VizPark Interior Decor Free Samples</a></p>
+  </li>
+  <li>
+    <p><a href="https://flyingarchitecture.com/store" target="_blank">FlyingArchitecture Library (free and paid)</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.polantis.com/plants" target="_blank">Polantis Architecture Assets</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.cadnav.com/" target="_blank">CadnNav 3D Models</a></p>
+  </li>
+  <li>
+    <p><a href="https://renderpeople.com/free-3d-people/" target="_blank">RenderPeople 3D Rigged People Models</a></p>
+  </li>
+  <li>
+    <p><a href="https://moffatusa.kclcad.com/app/I11141122#models" target="_blank">Industrial Kitchen BIM Objects</a></p>
+  </li>
+  <li>
+    <p><a href="https://sketchfab.com/search?features=downloadable&amp;q=malopolska+&amp;sort_by=-relevance&amp;type=models" target="_blank">Photoscanned Museum Assets</a></p>
+  </li>
+  <li><a href="https://www.myminifactory.com/category/scan-the-world" target="_blank">Photoscanned 3D Models</a></li>
+</ul>
+
+<h3 id="vegetation-assets">Vegetation Assets</h3>
+
+<ul>
+  <li>
+    <p><a href="http://www.evolved-software.com/treeit/treelibrary" target="_blank">TreeIT Tree Library</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.vizpark.com/free-stuff/" target="_blank">VizPark Plants Free Samples</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.polantis.com/plants" target="_blank">Polantis Tree and Plant Assets</a></p>
+  </li>
+  <li>
+    <p><a href="https://3dsky.org/" target="_blank">3Dsky 3D Models</a></p>
+  </li>
+</ul>
+
+<h3 id="photoscans">Photoscans</h3>
+<ul>
+  <li><a href="https://sketchfab.com/ffishAsia-and-floraZia/models/" target="_blank">Flower, Animal and Insect Scans</a></li>
+</ul>
+
+:ET

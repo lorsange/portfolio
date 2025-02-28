@@ -18,7 +18,7 @@
             {% if page.active == lowercase_nav_item %}
               <li class="active"><a href="{{ nav_item[1] }}">{{ nav_item[0] }}</a></li>
             {% else %}
-              <li><a href="{{ nav_item[1] }}">{{ nav_item[0] }}</a></li>
+              <li><a href="{{ nav_item[1] }}">{{ nav_item[0] }}</a></li> <!-- header name for tabs -->
             {% endif %}
           {% endfor %}
         {% endfor %}

@@ -19,6 +19,7 @@ layout: default
 
 <article>
 <!-- Post Header -->
+
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% endif %}')">
     <div class="container">
         <div class="row">
@@ -27,23 +28,25 @@ layout: default
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
-                    <span class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
+                   <!--<span class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>-->
 
-<span class="time-tag-categ" style="font-size:.7em;background-color: rgba(128, 128, 128, 0.45);">
-
-{% assign minutes = content | number_of_words | divided_by: 180 %}
+<span class="time-tag-categ" style="font-size:.7em;background-color: transparent;color: transparent;">
+<!--
+  {% assign minutes = content | number_of_words | divided_by: 180 %}
 <i class="fa fa-clock-o"></i>&nbsp;{% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
 {{ minutes }} minute read
-
+-->
 
 
  {% if post.tags.size > 0 %}
-  &sim; Tagged with <i class="fa fa-tags"></i>{% if post.tags.size == 1 %} {% else %}{% endif %}&nbsp;:&nbsp;{% for tag in page.tags %}<a href="{{ site.baseurl }}/journal/tag/{{  tag | cgi_encode }}/" data-toggle="tooltip" title="Other posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}{% endif %}
-
+ <!--
+   Tags </i>{% if post.tags.size == 1 %} {% else %}{% endif %}&nbsp;:&nbsp;{% for tag in page.tags %}<a href="{{ site.baseurl }}/notes/tag/{{  tag | cgi_encode }}/" data-toggle="tooltip" title="Other posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}{% endif %}
+ -->
 
   {% if post.categories.size > 0 %}
-   &sim; Filed in <i class="fa fa-briefcase"></i>{% if post.categories.size == 1 %} {% else %}{% endif %}&nbsp;:&nbsp;{% for tag in page.categories %}<a href="{{ site.baseurl }}/journal/category/{{ tag | cgi_encode }}/" data-toggle="tooltip" title="Other posts filed in {{ tag }} category" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %%}{% endif %}    
-                    
+  <!--
+   Category </i>{% if post.categories.size == 1 %} {% else %}{% endif %}&nbsp;:&nbsp;{% for tag in page.categories %}<a href="{{ site.baseurl }}/notes/category/{{ tag | cgi_encode }}/" data-toggle="tooltip" title="Other posts filed in {{ tag }} category" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %%}{% endif %}    
+  -->                  
    </span>
 
             </div>
@@ -64,9 +67,9 @@ layout: default
     <br>
 
 
-               {% include signoff.html %} 
+               <!-- {% include signoff.html %} 
     <hr class="small">
- {% if site.share %}{% include share.html %}{% endif %}
+ {% if site.share %}{% include share.html %}{% endif %} -->
                         
 {% if site.comments %}{% include disqus_comments.html %}{% endif %}
                         
@@ -90,15 +93,15 @@ layout: default
 </article>
 
 <br>
-
-<hr class="medium">
+<!--
+ <hr class="medium"> 
 
             <div class="tags-wrap">
    <div class="tags">
 
   <div class="section-heading group" style="color: #fff; text-align: center; margin-top: 10px;">
 
-    <h3>Tags Cloud</h3>
+    <h5>Tags</h5>
 
   </div>
 
@@ -127,19 +130,19 @@ layout: default
 
   <div class="tag-list">
     {% for tag in tags %}
-<a href="{{ site.baseurl }}/journal/tag/{{ tag | slugify }}/" style="text-decoration:none;"> {{ tag }} </a> &nbsp;&nbsp;
+<a href="{{ site.baseurl }}/notes/tag/{{ tag | slugify }}/" style="text-decoration:none;"> {{ tag }} </a> &nbsp;&nbsp;
 {% endfor %}
   </div>
 
 </div>
 
-<hr class="medium">
+ <hr class="medium"> 
 
 <div class="categories">
 
   <div class="section-heading group" style="color: #fff; text-align: center; margin-top: 10px;">
 
-    <h3>Categories Cloud</h3>
+    <h5>Categories</h5>
 
   </div>
 
@@ -169,13 +172,12 @@ layout: default
 
  <div class="category-list">
    {% for category in categories %}
-<a href="{{ site.baseurl }}/journal/category/{{ category | slugify }}/"> {{ category }} </a> &nbsp;&nbsp;
+<a href="{{ site.baseurl }}/notes/category/{{ category | slugify }}/"> {{ category }} </a> &nbsp;&nbsp;
 {% endfor %}
   </div>
 
 </div>
-
-<hr class="medium">
+-->
 
 <br>
 <br>

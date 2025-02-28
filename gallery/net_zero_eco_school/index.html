@@ -1,0 +1,128 @@
+---
+layout: page
+title: "Forest School"
+description: "masonry"
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: "Forest School - Winter 2022"
+
+images:
+ - image_path: /gallery/archive/net_zero_eco_school/fp1.jpg
+   caption: Ground Floor Plan
+
+ - image_path: /gallery/archive/net_zero_eco_school/fp2.jpg
+   caption: First Floor Plan
+
+ - image_path: /gallery/archive/net_zero_eco_school/section_persp_1.jpg
+   caption: North-South Section
+
+ - image_path: /gallery/archive/net_zero_eco_school/main_entrance_shot.jpg
+   caption: Entrance
+
+ - image_path: /gallery/archive/net_zero_eco_school/classroom_interior_shot.jpg
+   caption: Classroom
+
+ - image_path: /gallery/archive/net_zero_eco_school/courtyard_center_shot.jpg
+   caption: Courtyard
+
+ - image_path: /gallery/archive/net_zero_eco_school/oasis_shot.jpg
+   caption: Oasis
+
+ - image_path: /gallery/archive/net_zero_eco_school/simulations.jpg
+   caption: Simulation
+
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+      <h4>TEAM: Joshua Weber, Dalton Haffner, Will Fice</h4>
+      <p> This goal of this studio was to create a net-zero energy elementary school in Portland, Oregon as a group of 3. Our group decided to
+          focus on a forest school pedagogy that would allow us to provide a sanctuary within a neglected neighborhood and failing education system. The main form
+          is based on two courtyards, one that is sheltered by the school and provides a sanctuary and another that is more public facing, allowing for community gardens
+          and fields. The building respects this idea by organizing itself with public elements such as a community room, cafeteria, kitchen and gym as multiuse 
+          spaces between the courtyards, allowing for community use after hours and on weekends. Our project responds to sustainability goals by looping unconditioned 
+          circulation around an open courtyard inspired by Tanner Springs. The unconditioned hallway provides a threshold between classroom and nature, sheltering the 
+          occupant with deep overhangs and a spatial lattice that allows for plant growth like Honeysuckle and Gooseberry that can provide shade in summer while supporting
+          pollinators. The threshold between classroom to hallway to courtyard is also built upon by a multipurpose bench that is in both hallway in classroom, allowing 
+          for outdoor teaching, play and prospect. Furthermore into the classroom there are three main spaces being the central classroom, a breakout room and a child scale 
+          cubby. The form of the classroom wings takes a sawtooth shape that allows for each classroom to have an outdoor classroom and is also reflected in the roof structure
+          which allows for water to drain into the courtyard.
+      </p>
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>

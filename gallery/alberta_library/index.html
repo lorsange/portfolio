@@ -1,0 +1,145 @@
+---
+layout: page
+title: "Alberta Library"
+description: "masonry"
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: "Alberta Library - Fall 2020"
+images:
+
+ - image_path: /gallery/archive/alberta_library/ground_floor_plan.jpg
+   caption: Ground Floor
+
+ - image_path: /gallery/archive/alberta_library/mezzanine_plan.jpg
+   caption: Mezzanine
+
+ - image_path: /gallery/archive/alberta_library/first_floor_plan.jpg
+   caption: First Floor
+
+ - image_path: /gallery/archive/alberta_library/second_floor_plan.jpg
+   caption: Second Floor
+
+ - image_path: /gallery/archive/alberta_library/site_plan.jpg
+   caption: Site 
+
+ - image_path: /gallery/archive/alberta_library/site_persp.jpg
+   caption: Exterior
+
+ - image_path: /gallery/archive/alberta_library/atrium.jpg
+   caption: Atrium
+
+ - image_path: /gallery/archive/alberta_library/diagrams.jpg
+   caption: Diagrams
+
+ - image_path: /gallery/archive/alberta_library/parti_section.jpg
+   caption: Initial Parti
+
+ - image_path: /gallery/archive/alberta_library/parti.jpg
+   caption: Initial Parti 
+
+
+ - image_path: /gallery/archive/alberta_library/front_elevation.jpg
+   caption: South Elevation
+
+ - image_path: /gallery/archive/alberta_library/night_elev.jpg
+   caption: South Elevation
+
+ - image_path: /gallery/archive/alberta_library/section_01.jpg
+   caption: Section 01
+
+ - image_path: /gallery/archive/alberta_library/section_02.jpg
+   caption: Section 02
+
+
+
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+      <p>
+        In this studio the task was to design a branch library in the Alberta neighborhood of Portland, Oregon. My initial concept is an arrangement of 
+        rose petals referencing Portlands identity as the city of roses. Taking further from the form of a rose the petal forms are overlapped creating more intricate spaces 
+        and passageways to the outside terraces. These passages also create a lantern effect during the night that diffuses along the curved exterior, enhancing
+        the ever developing night life of the Alberta neighborhood. After developing the initial arrangement of rose petals, the geometry was toned down to better situate 
+        the library as a branch library while still maintaining its qualities. Organizationally the library in composed of the ground floor which contains the most public spaces
+        such as event rooms, children's area with outdoor space and a cafe that can be separated from the library after hours and give to the nightlife. The mezzanine space exists to
+        life the library up from its context to make itself more prominent. The rest of the floors continue the privacy gradient up the building to the quiet reading rooms and hen-run
+        up top.
+
+      </p>
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

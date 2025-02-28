@@ -1,0 +1,107 @@
+---
+layout: page
+title: "Sprout Center"
+description: "masonry"
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: "GIS Car Crashes"
+youtubeId1: -yvLCprMddQ?si=hNvlcYAp-BsELpXD
+youtubeId2: 3gT5NXHIX6g?si=PQ58iR3KwcZfpUN3
+images:
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h1><center>{{page.album-title}}</center></h1>
+      <br></br>
+      {% include youtubePlayer.html id=page.youtubeId1 %}
+      {% include youtubePlayer.html id=page.youtubeId2 %}
+      <p>
+      This maps vehicle crashes in Portland, the data represents years 2007 through 2021. THe project was completed in Houdini and implements depth first search and custom importers.
+      </p>
+
+      <p>
+      For improved I/O a custom <a href="https://www.sidefx.com/docs/hdk/class_g_e_o___i_o_translator.html"  target="_blank">GEO_IOTranslator</a> was written to read data from the Portland Metro RLIS and OpenData sources. For simplicity this plugin had no external dependencies and was eventually re-written to have support for the rest of the geoJSON specification. Resulting speeds were 3-4x greater than alternative python I/O that had less functionality. 
+      </p>
+
+      <p> 
+      One problem with visualizing GIS data in a polygon based software is the ability to render "holes". Typical GIS software renders without the triangulation typically used in film and games. To represent holes, they often use ordered and nested arrays to represent internal holes. For example the outer shape of a continent is defined by an array of points that are ordered in the same way you would have points of a polygon, this is called a "Ring". After this first ring is defined subsequent rings will be drawn as holes. Of course this is not possible with polygons without a lot of extra work searching for bridge points, luckily you can cast the GEO_Detail to a GU_Detail which is a safe operation and use the GU_Detail.buildHoles() function which does all this for you. An important thing to note is that this is a very expensive operation. In order to optimize it but retain simplicity I do two passes of the geometry, in the first pass only building polygons with holes and calling buildHoles() and in the second pass building everything else.
+      </p>
+
+      <p> 
+      The incoming crash data was only crash locations, so to create an animation depth first search was used to extract artificial paths based on a given length. This was done on a polyline graph of street networks and the primitives to travel along were stored in an array before being fed into a solver which is where animation took place. This made creating trails easy because the primitive array was already stored. 
+      </p>
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

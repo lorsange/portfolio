@@ -1,0 +1,136 @@
+---
+layout: page
+title: "Sprout Center"
+description: "masonry"
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: "Sprout Center"
+images:
+
+ - image_path: /gallery/archive/uvl/entrance_shot_001.jpg
+   caption: Entrance
+
+ - image_path: /gallery/archive/uvl/dining_room_shot_001.jpg
+   caption: Dining Area
+
+ - image_path: /gallery/archive/uvl/greenhouse_shot_001.jpg
+   caption: Greenhouse  
+
+ - image_path: /gallery/archive/uvl/axon_lowres.jpg
+   caption: Massing
+
+ - image_path: /gallery/archive/uvl/greenhouse_shot_002.jpg
+   caption: Greenhouse
+
+ - image_path: /gallery/archive/uvl/courtyard_shot_001.jpg
+   caption: Courtyard 
+
+ - image_path: /gallery/archive/uvl/ground_floor_plan_lowres.jpg
+   caption: Ground Floor Plan
+
+ - image_path: /gallery/archive/uvl/first_floor_plan_lowres.jpg
+   caption: First Floor Plan
+
+ - image_path: /gallery/archive/uvl/second_floor_plan_lowres.jpg
+   caption: Second Floor Plan 
+
+ - image_path: /gallery/archive/uvl/front_lawn_shot_001.jpg
+   caption: Front Lawn
+
+ - image_path: /gallery/archive/uvl/canopy_shot_001.jpg
+   caption: Canopy
+
+ - image_path: /gallery/archive/uvl/greenhouse_shot_003.jpg
+   caption: Greenhouse
+
+ - image_path: /gallery/archive/uvl/section_001_lowres.jpg
+   caption: East - West Section
+
+ - image_path: /gallery/archive/uvl/section_002_lowres.jpg
+   caption: North - South Section
+
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h1><center>{{page.album-title}}</center></h1>
+      <br></br>
+      <h3><center>A Healthier Future</center></h3>
+      <p><center>
+    The Sprout Center addresses issues of food and health by intertwining the greater public with neighboring single parents into the cycle of food, from seed saving and nutrient generation to eating and processing. This practice of closed systems reduces economic and ecological strains while strengthening food security. 
+      </center></p>
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

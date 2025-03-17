@@ -1,0 +1,140 @@
+---
+layout: page
+title: "Timber Tectonics"
+description: "masonry"
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: "Timber Tectonics"
+images:
+
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+      <h4>TEAM: Joshua Weber, Madeline Phillips, Charlie Jenck, Jason Blanco</h4>
+      <br></br>
+      <iframe src="https://player.vimeo.com/video/778298981?h=341770684f" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/778299020?h=b70d8e3cca" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <hr></hr>
+      <h3>Project Brief</h3>
+      <p>
+        In this project we collaborated with Oregon State University engineering students to develop a parametric, reciprocal framed structure for re-use of Mass Plywood Panel (MPP) scraps
+        with CNC fabrication at the TallWood Design Institute Emerson Lab. The goal of creating a reciprocal structure is to allow for fast assembly and disassembly with no mechanical
+        fasteners allowing the structure to move nomadically. 
+      </p>
+      <hr></hr>
+      <hr></hr>
+      <h3>Parametric Modelling</h3>
+      <p>
+        Before developing the parametric model it was key to understand the geometry of the system and what it meant for fabrication. To develop the parametric model I 
+        worked with Houdini to give me the most flexibility, you can view and download a condensed script <a href="https://hdbp.io/fNJm2pOy" target="_blank">here</a>. The script 
+        was made to use ramp scaling on the base radius of the polygons to allow to section testing in terms of concavity and convexity. Then using Task Operators (TOPs) I 
+        generated a few thousand variations testing different parameters, some of which can be seen in the video below. 
+        <iframe src="https://player.vimeo.com/video/765114333?h=33f26ce0fe" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </p>
+      <hr></hr>
+      <h3>Structural Testing and Form Finding</h3>
+      <p>
+        Working together with our teams engineering students we analyzed our structure using Karamba inside of grasshopper, using the geometry exported from the parametric model
+        in Houdini. There were several aspects we wanted to test with the first being convex, liner and concave forms seen below. The test results showed decreases in performance in both 
+        convex and concave forms but with 400% decrease in performance in concave forms, making linear the most efficient.
+        <img src="../../gallery/archive/timber_tectonics/concave_convex_test_side_profile.png" alt="Concave Convex Testing Profile">
+      </p>
+      <hr></hr>
+      <h3>Fabrication Optimization</h3>
+      <p>
+        Not using any mechanical fasteners meant all of our joints were half laps or birds mouth connections. Where we realized our model was constrained was in the maximum 
+        slope it could be which we created an equation to define. <b>Max Slope = tan-1((member depth – notch depth)/(extension length * tan(360/number of sides)))</b>. This restriction
+        comes from the notches becoming too deep to be structurally efficient. Another problem is that notches would often have compound angles where if optimized there would
+        only be a single plane. This was a function of how deep the sloping member notched into the horizontal member and is shown below along with other notching factors.
+        <iframe src="https://player.vimeo.com/video/778299057?h=d12106969d" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </p>
+      <hr></hr>
+      <h3>Construction</h3>
+      <p>
+        Our teams design was unable to be fabricated on the CNC at the TallWood Institute so our model was made out of Douglas Fir 2x6 which were ripped to 1.5"x2.5" which
+        I then notched by hand using a multi-tool and chisel totalling over 140 notches. This structure is seen below and measures 12' diameter and is assembled in 6 minutes and disassembled in 2.
+        Construction a full scale model was helpful in understanding the properties of non-engineered wood products which have imperfections like knots. After walking on the structure for a minute or so it
+        broke at one of the notches. This told us two things, the first of which is that the knots should always be on the compression side which was not the case here and second
+        that the structure is most efficient when loaded from the top. This is because the load is evenly distributed among all of the sloping member when standing at the peak
+        whereas in the image below if you trace the load paths from the standing point they are concentrated on only 3 of the sloped members with the one of the left being the breaking point.
+        <img src="../../gallery/archive/timber_tectonics/timber_tectonics_physical_model.jpg" alt="Physical Model">
+        <img src="../../gallery/archive/timber_tectonics/timber_tectonics_physical_model_standing.jpg" alt="Physical Model">
+        <img src="../../gallery/archive/timber_tectonics/timber_tectonics_physical_model_snap.jpg" alt="Physical Model">
+      </p>
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  	
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

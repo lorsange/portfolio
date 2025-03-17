@@ -1,0 +1,146 @@
+---
+layout: page
+title: "Federal School"
+description: "masonry"
+active: gallery
+header-img: "img/gallery-bg.jpg"
+album-title: "Federal School - Fall 2021"
+images:
+
+ - image_path: /gallery/archive/net_zero_federal_school/first_floor_plan.jpg
+   caption: First Floor
+
+ - image_path: /gallery/archive/net_zero_federal_school/ground_floor_plan.jpg
+   caption: Ground Floor
+
+ - image_path: /gallery/archive/net_zero_federal_school/across_the_street_shot.jpg
+   caption: Exterior Perspective
+
+ - image_path: /gallery/archive/net_zero_federal_school/atrium.jpg
+   caption: Atrium
+
+ - image_path: /gallery/archive/net_zero_federal_school/classroom_section_shot.jpg
+   caption: Classroom Section
+
+ - image_path: /gallery/archive/net_zero_federal_school/classroom_shot.jpg
+   caption: Classroom 
+
+ - image_path: /gallery/archive/net_zero_federal_school/library_shot.jpg
+   caption: Library
+
+ - image_path: /gallery/archive/net_zero_federal_school/lobby_shot.jpg
+   caption: Lobby
+
+ - image_path: /gallery/archive/net_zero_federal_school/first_floor_plan.jpg
+   caption: First Floor
+
+ - image_path: /gallery/archive/net_zero_federal_school/ns_section_persp_shot.jpg
+   caption: North-South Section
+
+ - image_path: /gallery/archive/net_zero_federal_school/east_elev.jpg
+   caption: East Elevation
+
+ - image_path: /gallery/archive/net_zero_federal_school/west_elev.jpg
+   caption: West Elevation
+
+ - image_path: /gallery/archive/net_zero_federal_school/south_elev.jpg
+   caption: South Elevation
+
+ - image_path: /gallery/archive/net_zero_federal_school/west_elev.jpg
+   caption: West Elevation
+
+ - image_path: /gallery/archive/net_zero_federal_school/structure.jpg
+   caption: Mass Timber Structure
+
+ - image_path: /gallery/archive/net_zero_federal_school/energy.jpg
+   caption: Energy Use Analysis
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+      
+      <P>
+        In this studio I worked individually to design an elementary school on Mountain Home Air Force Base in Idaho. 
+        The entire project massing and concept was conceived in an 18 hour charette at the air force base which led me to create a 
+        structural grid of 30x30 for mass timber that also worked with the required classroom size allowing for all circulation to 
+        be single loaded corridors. These modules are then arrayed on the south and west side around a courtyard allowing for ample daylight
+        through bays and clerestory roofs that also support southern solar panels. The other programatic elements such as library, cafeteria, STEM
+        classrooms and flex space are placed on the north and east sides of the courtyard allowing students to eat lunch outside while being completely
+        secure in the courtyard.
+      </P>
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+             return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>
